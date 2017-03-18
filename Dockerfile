@@ -6,7 +6,7 @@ MAINTAINER yinheli <me@yinheli.com>
 
 #RUN /bin/sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh && \
-    apt-get update && apt-get install -y zlib1g-dev lib32z1 lib32ncurses5 && \
+    apt-get update && apt-get install -y zlib1g-dev lib32z1 lib32ncurses5 wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     mkdir -p /app/bin
